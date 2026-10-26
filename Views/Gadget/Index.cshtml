@@ -1,0 +1,27 @@
+@model IEnumerable<GadgetInventory.Models.Gadget>
+
+<h2>Gadget Inventory</h2>
+<a asp-controller="Gadget" asp-action="Create" class="btn btn-primary">Add New Gadget</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Brand</th>
+            <th>Model Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Gadget  in Model)
+        {
+            <tr>
+                <td>@Gadget.Id</td>
+                <td>@Gadget.Brand</td>
+                <td>@Gadget.ModelName</td>
+                <td>@Gadget.Price</td>
+               
+            </tr>
+        }
+    </tbody>
+</table> 
